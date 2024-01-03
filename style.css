@@ -126,4 +126,27 @@ image-container {
 .header p{
 	max-width: 360px;
 	font-weight: 500;
+	
+	
 }
+ a {
+    text-decoration: none; 
+    color: black;  
+}
+
+ a:hover {
+    color: gray;  
+}
+
+ .nav-links {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;  
+    color: black;  
+    margin-right: 20px;  
+    display: inline; 
+
+ 
