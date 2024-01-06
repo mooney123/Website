@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.col-4{
+      flex-basis: calc(25% - 20px); /* Adjust width based on the number of columns */
+    padding: 10px;
+    margin-bottom: 30px; /* Adjust the space between items */
+    text-align: center;
+
+}
+.col-4 img{
+	width: 100%;
+}
+
+
+/* Add these styles to position products below the navigation bar */
+.small-container {
+    margin-top: 80px; /* Adjust margin to push content below the navigation bar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
