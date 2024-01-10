@@ -1,4 +1,4 @@
-  *{
+ *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -12,10 +12,11 @@ nav{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px 10%;
+	padding: 50px 5%;
 	border-bottom: 1px solid #000;
 	z-index: 10;
 	background: #FDF2E9;
+	
 }
 nav ul li{
 	list-style: none;
@@ -71,24 +72,24 @@ nav .logo{
     text-decoration: none;  
     color: black;  
     margin-right: 20px;  
-    display: inline; /* Display links in line */
+    display: inline;  
     
 }
 
 
 .row h2 {
     text-align: left;
-    margin-bottom: 20px; /* Optional: Adjust the bottom margin as needed */
+    margin-bottom: 20px; 
 }
 nav{
-	 	position: fixed;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px 10%;
+	padding: 29px 5%;
 	border-bottom: 1px solid #000;
 	z-index: 10;
 	background: #FDF2E9;
@@ -124,13 +125,12 @@ nav{
 }
 
 .col-4 {
-  display: inline-block; /* Ensures the box size fits the content */
-  padding: 5px; /* Adjust as needed to fit the content */
+  display: inline-block;  
+  padding: 5px;  
   border: 1px solid #000;
   border-radius: 8px;
   text-align: center;
-  margin-right: 10px; /* Optional: Adjust spacing between products */
-  background: #fff;
+  margin-right: 10px;  
   
   
 }
@@ -138,7 +138,7 @@ nav{
 .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between product cards */
+  gap: 20px; 
 }
 
 .product-card {
@@ -164,10 +164,10 @@ nav{
 
  
 .sephora-select {
-   padding: 8px 30px 8px 10px; /* Adjust the padding as needed */
+   padding: 8px 30px 8px 10px;  
   border: none;
   border-radius: 20px;
-   /* Remove default arrow on some browsers */
+ 
   background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
   background-repeat: no-repeat;
   background-position: right 8px top 50%; 
@@ -177,21 +177,21 @@ nav{
   font-family: 'Poppins', sans-serif;  
      background-color: transparent;
 }
-/* Style select options */
+ 
 .sephora-select option {
-  background-color: #fff; /* Background color of options */
+  background-color: #fff;  
   color: #333; /* Text color */
    background-color: transparent;
 }
 .sephora-select::after {
    
-    content: ''; /* Empty content for pseudo-element */
-  display: block; /* Make it a block-level element */
-  width: 100%; /* Take the full width */
-  height: 1px; /* Height of the line */
-  background-color: #a1885f; /* Light brown color */
-  margin-top: 5px; /* Adjust as needed */
+    content: ''; 
+  display: block;  
+  width: 100%;  
+  height: 1px;  
+  background-color: #a1885f;  
+  margin-top: 5px; 
 }
 
  
-}
+
