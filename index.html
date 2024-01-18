@@ -9,49 +9,121 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Salsa&display=swap" rel="stylesheet">
 </head>
 
 <body>
+   <div class="mini-nav">
+       
+      <p>Free Delivery on Orders Over 500 LYD</p>
+  </div>
+   
 <nav>
-<img src="images/logo.png" alt="" class="logo">
+    
+ 
+<img src="images/logo.png" alt="" class="logo" >
+ <div class="searchBar">
+      <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+      <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+  </div>
 
-<div class="nav-links">
- <a href="index.html" >Home</a>
- <a href="products.html" >Products</a>
- <a href="page1.html" >Services</a>
- <a href="page1.html" >about us</a>
-</div> 
-
+<div class="icons">
+<a href="https://www.instagram.com/skinsolutions.ly/">
+   <img src="images/instagram.png" width="30px" height="30px"
+</a>
+ 
 <a href="cart.html">
 <img alt="" src="images/cart.png" width="30px" height="30px">
 </a>
+</div>
 </nav>
+<div class="second-mini-nav">
+   <div class="nav-links">
+      <a href="index.html" >Home</a>
+      <a href="products.html" >Products</a>
+    
+      <a href="contact.html">Contact us</a>
+      <a href="contact.html">Hair</a>
+      <a href="contact.html">Body</a>
+      <a href="contact.html">Fragrance</a>
+      <a href="contact.html">Skincare</a>
+      <a href="contact.html">Makeup</a>
+     </div> 
+    
+</div>
+<div class="image-slider">
+   <div class="mySlides">
+    <div class="slide-message">
+        <p>Reflection of Perfection</p>
+        <p>Discover your flawless reflection today.</p>
+        <a href="products.html">
+        <button class="slide-button" onclick="handleButtonClick()">Shop Now</button>
+    </a>
+    </div>
+    <img src="images/slideshow1.jpg" alt="Slide 1">
+</div>
+       
+   <div class="mySlides">
+       <img src="images/slideshow3.jpg" alt="Slide 2">
+   </div>
+   <!-- Add more slides as needed -->
+
+   <!-- Navigation Buttons -->
+   <button class="prev" onclick="plusSlides(-1)">❮</button>
+   <button class="next" onclick="plusSlides(1)">❯</button>
+</div>
 
 
- <img src="images/Homepage.JPG" alt="" class="full-width-image">
- <a href="products.html">
-<button class="nav-btn">Shop now</button>
- </a>
+  
+ 
  
 <div class="header">
 
    <h1> <br><br> </h1>
    <div class="btn-container">
    
-      <a href="contact.html"><button class="btn-dark">Contact us<img src="images/phone.png"></button></a>
-<a href="page2.html"><button class="btn-light">Know more<img src="images/arrow-black.png"></button></a>
-     
+       
      
      
    </div>
-   <p>Cerave and other products for great prices</p>
+   
    
    
    
    
 </div>
 
+<script>
+     let slideIndex = 0;
+let intervalId; // Declare the intervalId outside the functions
 
+function showSlides() {
+    const slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function plusSlides(n) {
+    clearInterval(intervalId);
+    showSlides((slideIndex += n));
+    intervalId = setInterval(showSlides, 4000); // Restart the interval after changing the slide
+}
+
+showSlides();
+intervalId = setInterval(showSlides, 4000);
+</script>
 
 </body>
 
