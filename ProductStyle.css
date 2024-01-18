@@ -1,197 +1,403 @@
- *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+ 
+
+/*Adding margin, padding and font to everything */
+* {
+   margin: 0;
+   padding: 0;
+   font-family:'Montserrat', sans-serif;
+  
+ }
+ /*using the body container to change the background aspect for the shopping.html page */
+ body {
+   background-color: #fff;
+   /*background-image: url(images/pexels-pixabay-236028.jpg);*/
+   background-size: cover;
+   
+   
+ }
+ .mini-nav {
+   background-color: #000; /* Set the background color for the mini nav strip */
+   color: #fff; /* Set the text color for the mini nav strip */
+   text-align: center;
+   padding: 10px; /* Adjust the padding as needed */
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000; /* Ensure the mini nav appears above other elements */
+ 
 }
-nav{
-	position: fixed;
-	top: 0;
+
+/* Adjust the styles for the text or links within the mini nav strip */
+.mini-nav p {
+   margin: 0;
+   font-size: 14px;
+    
+   font-weight: bold;
+}
+ /*Header Navigation bar responsive */
+ nav{
+   position: fixed;
+	top:20px;
 	left: 0;
 	width: 100%;
-	display: flex;
+	display:inline-flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 50px 5%;
-	border-bottom: 1px solid #000;
+	padding: 1px 5%; 
 	z-index: 10;
-	background: #FDF2E9;
-	
+	background: #fff;
+ }
+ icons{
+	display: flex;
+    gap: 10px; 
+    margin-left: auto;
 }
-nav ul li{
-	list-style: none;
-	display: inline-block;
-	margin: 10px 20px;
-	font-weight: 500;
-	cursor: pointer;
-	content: '•';
-	margin-left: 20px;
-	 margin-right: 20px;
-}
-nav .logo{
+ .logo{
 	width: 135px;
 	height: auto;
 	cursor: pointer;
-	position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nav-btn{
-	background:#fff;
-	color:  #000;
-	font-size: 16px;
-	padding: 5px 25px;
-	border: 1px solid #000;
-	outline: 0;
-	border-radius: 20px;
-	cursor: pointer;
-	font-weight: bold;
 	 
+}
+ 
   
+ 
+ 
+ a {
+   text-decoration: none;
+   color: white;
+   margin: 0 10px;
+ }
+ 
+ /*logo*/
+ .logo {
+   padding-left: 1vh;
+   font-size: 1.5em;
+   color: #348c91;
+ }
+ 
+ nav a {
+   font-weight: 600;
+   padding: 10px;
+ }
+ 
+ nav a:hover {
+   color: #348c91;
+ }
+ 
+ /*Making the navigation bar responsive at the screen view */
+ @media (max-width: 700px) {
+   header {
+     flex-direction: column;
+     align-items: center;
+   }
+ 
+   nav {
+     padding: 10px 0px;
+   }
+ }
+ /*End of the Navigation bar Responsive*/
+ /*SHOPPING.HTML CSS -->*/
+ /*format for the header h1 "knitland" tho positioning to the left and in a good size to nice view */
+ 
+ .shopping-body{
+      
+     max-width: 1200px;
+     margin: 200px auto 0;
+ }
+ 
+   h1 {
+     color: #348c91;
+     text-align: left;
+     font-size: 4em;
+ 
+     margin-bottom: 0px;
+     margin-left: 0px;
+     padding-bottom: 0px;
+     
+   }
+ 
+ /* format/position and size for the icon basket that is in the header on the right side*/
+ .iconbasket {
+   margin-top: 20px;
+   height: 40px;
+   width: 40px;
+   stroke: rgba(0, 0, 0);
+ }
+ /*confifuring the cursor for the icon basket class when we hover it*/
+ .iconbasket:hover {
+   cursor: pointer;
+ }
+ /*let the images takes the 100% of the width where they are*/
+ img {
+   max-width: 100%;
+ }
+ 
+ /*Header style*/
+ header .shopping {
+   margin-top: 50px;
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 0 40px 0;
+ }
+ 
+ /* This is the icon class (father) where is the block that contains
+ all the window information about our cart*/
+ .icon {
+   position: relative;
+   display: flex;
+   justify-content: right;
+   align-items: center;
+ }
+ 
+ /*format for the product-counter class(container for the counter of the products that is over the basket icon)
+  to positioning using display flex, giving it background color, text color and a good size for a good view effect*/
+ .product-counter {
+   position: absolute;
+   top: 58%;
+   right: 0;
+ 
+   background-color: black;
+   color: white;
+   width: 25px;
+   height: 25px;
+ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+ }
+ /*giving font- size to the span that contains just the number of the counter*/
+ #product-counterID {
+   font-size: 12px;
+ }
+ 
+ /*design format for the container-car-products that is the box that will appear when we do a click on the icon of the basket
+ positioning at z-index =2 due to the nav bar is over the box at z index 3 and the images and boxes item are at indez z = 1*/
+ .container-cart-products {
+   position: absolute;
+   top: 50px;
+   right: 0;
+   background-color: white;
+   width: 400px;
+   z-index: 2;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+   border-radius: 15px;
+ }
+ /*let the cart hidden using the display none and the class hidden-cart*/
+ .hidden-cart {
+   display: none;
+ }
+ /*format for the icon X used for "cancel a product"*/
+ .icon-X {
+   width: 25px;
+   height: 25px;
+ }
+ /*format for the icon-X class when we hover it*/
+ .icon-X:hover {
+   color: red;
+   cursor: pointer;
+ }
+ /*formating the elemennts inside the box of the cart products using the class cart-products*/
+ .cart-product {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 30px;
+   
+   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+ }
+ /*formating the elemennts information of the product inside the cart products box using the class cart--info-products*/
+ .cart-info-product {
+   display: flex;
+   justify-content: space-between;
+   flex: 0.8;
+ }
+ /*format for the cuantity number of the products inside the cart*/
+ .products-cart-cuantity {
+   font-weight: 400;
+   font-size: 20px;
+ }
+ /*format for box that contains the "Total" of money inside the cart */
+ .cart-total {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px 0;
+   gap: 20px;
+ }
+ /*format for the header h3 (text)*/
+ .cart-total h3 {
+   font-size: 20px;
+   font-weight: 700;
+ }
+ /*format for the number used for give the total amount of money*/
+ .Total-pay {
+   font-size: 20px;
+   font-weight: 900;
+ }
+ /*giving size to the name of the product inside the cart*/
+ .product-cart-name {
+   font-size: 1em;
+ }
+ /*format for the number used to give the amount of money that the item cost inside the cart*/
+ .price-cart-item {
+   font-weight: 700;
+   font-size: 20px;
+   margin-left: 10px;
+ }
+ /*design and format for the box that contains the information of the product
+  inside the shopping cart using display flex using the class cart-info-product*/
+ .cart-info-product {
+   display: flex;
+   justify-content: space-between;
+   margin-left: 2vh;
+   font-size: 1em;
+   font-weight: 600;
+ }
+ 
+ /*products styles*/
+ 
+ .products {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   
+   gap: 20px;
+ }
+ 
+ /*before pass the mouse hover the item*/
+ .item {
+   background-color: #fff;
+padding: 5px;
+border-radius: 20px;
+ border: 1px solid #e0ddd5;
 
+ }
  
-}
+ /*passing the mouse hover the item*/
+ .item:hover {
+   background: #33333377;
+   border-radius: 13px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+ }
+ /*giving formating to the images inside the boxes of the products in the shopping html*/
+ .item img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 15px 15px 0 0;
+   transition: all 0.5s;
+ }
+ /*we divide the items by boxes inside the shopping viewer and this configuration
+ help us to not overflow after the bords of the boxes */
+ .item figure {
+  overflow: hidden;
+  border-radius: 15px 15px 0 0; 
+ }
+ /*design and format for the animation when we hover the item boxes, giving effect to the images and using the
+ z-index setting to 1 to no overpass the navigation bar which has index z position of 3 when we scrolldown*/
+ .item:hover img {
+   transform: scale(1.2);
+   position: relative;
+  
+   z-index: 1;
+ }
+ /*formatting the class product-info which is the box that contains all the info of the products in the item box*/
+ .product-info {
+   padding: 15px 15px;
+   font-family: sans-serif;
+   font-size: 1.2em;
+   text-align: center;
+   font-weight: 400;
+   line-height: 2;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   color: #000;
+ }
+ .description-product{
+  color: black;
+  font-family: sans-serif;
+  font-weight: 500;
+  line-height: normal;
+  text-align: justify;
  
-
-.btn-container{
-	margin: 20px 0;
-}
+ }
  
+ /*formatting the price class element to giving it better looking */
+ .price {
+   color: #000;
+   font-size: 1.2em;
+   font-weight: 900;
+   font: bold;
+ }
  
-	
-	
+ /*style format for  the button (this is just for apresiation not working button yet!)*/
+ .product-info button {
+   margin-top: auto;
+   border: 2px solid #000;
+   background: none;
+   background-color: #fff;
+   border-radius: 15px;
+   color: #000;
+   font-weight: 700;
+   font: bold;
+   font-size: 1em;
+   padding: 15px 10px;
+   cursor: pointer;
+ }
  
-
- .nav-links {
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    text-decoration: none;  
-    color: black;  
-    margin-right: 20px;  
-    display: inline;  
+ .cart-empty{
+ padding: 20px;
+ text-align: center;
+ font-weight: 600;
+ 
+ }
+ 
+ .hidden {
+ 
+   display: none;
+ }
+ .row-2 {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-left: 20px
     
-}
-
-
-.row h2 {
-    text-align: left;
-    margin-bottom: 20px; 
-}
-nav{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 29px 5%;
-	border-bottom: 1px solid #000;
-	z-index: 10;
-	background: #FDF2E9;
-}
- 
-
- .small-container {
-    margin-top: 80px;  
-    flex-direction: column;
-    align-items: center;
-    padding-top: 200px;
-    background:#FDF2E9;
-    margin: 0; 
-    padding: 0;  
-}
-.row-2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 20px
+  
 }
 
 .row-2 h2 {
-  text-align: left;
-  margin-bottom: 20px;
+ text-align: left;
+ margin-bottom: 20px;
 }
 
 .row-2 select {
-  margin-left: 10px;
+ margin-left: 10px;
+ border: none;
 }
 .row-2 select:last-child {
-  margin-right: 25px;  
+ margin-right: 25px;  
+}
+.searchBar {
+   width: 60%;
+    
+   background-color: #eee;
+   border-radius: 3px;
+   padding: 9px;
+   display: flex;
+   align-items: center;
+;
+   justify-content: space-between;
+   margin: 0 auto;
 }
 
-.col-4 {
-  display: inline-block;  
-  padding: 5px;  
-  border: 1px solid #000;
-  border-radius: 8px;
-  text-align: center;
-  margin-right: 10px;  
-  
-  
-}
- 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; 
+input {
+   border: none;
+   outline: none;
+   background: none;
 }
 
-.product-card {
-  width: 220px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fff;
-  
+.glass:hover {
+   color: orangered;
+   cursor: pointer;
 }
-.product-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-   
-}
-
-.product-details {
-  padding: 10px;
-  text-align: center;
-}
-
-
- 
-.sephora-select {
-   padding: 8px 30px 8px 10px;  
-  border: none;
-  border-radius: 20px;
- 
-  background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 8px top 50%; 
-  background-size: 20px 20px;  
-  cursor: pointer;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;  
-     background-color: transparent;
-}
- 
-.sephora-select option {
-  background-color: #fff;  
-  color: #333; /* Text color */
-   background-color: transparent;
-}
-.sephora-select::after {
-   
-    content: ''; 
-  display: block;  
-  width: 100%;  
-  height: 1px;  
-  background-color: #a1885f;  
-  margin-top: 5px; 
-}
-
- 
-
