@@ -1,224 +1,213 @@
- <!DOCTYPE html>
-<html>
-
-<head>
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>GreatStack</title>
-<link rel="stylesheet" href="ProductStyle.css">
- 
- 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
- 
-</head>
-
-<body>
-<nav>
-<img src="images/logo.png" alt="" class="logo">
-
-<div class="nav-links">
- 
- <a href="index.html" >Home</a>
- <a href="products.html" >Products</a>
- <a href="page1.html" >Services</a>
- <a href="page1.html" >about us</a>
-</div> 
- 
- 
- <a href="cart.html">
-<img alt="" src="images/cart.png" width="30px" height="30px">
-</a>
-
-</nav>
-
-<img alt="" src="images/Homepage.jpeg">
-
- 
- 
-<div class="small-container">
-
-<div class="row-2">
-  
- 
-  
-
-  
-  <select class="sephora-select">
-       <option>Sort By Featured</option>
-       <option>Sort by price</option>
-  </select>
-  
-   <select class="sephora-select">
-       <option>All Departments</option>
-       <option>Makeup</option>
-       <option>Skincare</option>
-  </select>
-  
-      <select class="sephora-select">
-   
-       <option>Complexion</option>
-       <option>Eye</option>
-       <option>Lip + Cheek</option>
-  </select>
-  
-      <select class="sephora-select">
-   
-       <option>All prices</option>
-       <option>0-50</option>
-       <option>50-100</option>
-       <option>100-150</option>
-       <option>150-250</option>
-       <option>250-400</option>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--general information about the web settings -->
+    <meta charset="@UTF-8" />
+    <meta name="viewport" content="width= device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KNITLAND</title>
+    <link rel="stylesheet" type="text/css" href="ProductStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <!--linking the styleshop.css to upload styles using css-->
+  </head>
+  <!--element body that is our container for all the element inside the page-->
+  <body>
+    <div class="mini-nav">
        
-  </select>
-</div>
-
-
+      <p>Free Delivery on Orders Over 500 LYD</p>
+  </div>
+    <nav>
+     
+      <a href="index.html"
+        ><img src="images/logo.png" class="logo" alt="" ></a>
+        <div class="searchBar">
+      <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+      <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+  </div>
+       
  
-
- <main>
-  <section class="products"   style="padding-left: 20px; padding-right: 20px; margin-top: 40px;">
-    <div class="product-card" id="product-1">
-      <img src="images/Product1.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Tarte
-Shape Tape™ Radiant Concealer</h4>
-        <p>190 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <img src="images/Product2.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Fenty Beauty
-Match Stix Matte Skinstick - Multi-Use Stick Foundation</h4>
-        <p>175LYD</p>
-         <a href="Cart.html">
-        <button class="nav-btn" onclick="addToCart('product-2')">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product3.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Nars 
-Radiant Creamy Concealer - Concealer</h4>
-        <p>235 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product4.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Huda Beauty
-#FAUXFILTER Luminous Matte - Liquid Concealer</h4>
-        <p>185 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product5.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Too Faced
-Born This Way Super Coverage Concealer</h4>
-        <p>185 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product6.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Nars
-Soft Matte Complete Concealer</h4>
-        <p>235 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product7.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Tarte
-Travel Size Shape Tape Concealer </h4>
-        <p>120 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product9.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Rare Beauty
-Liquid Touch - Illuminating Concealer</h4>
-        <p>165 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="product-card">
-      <img src="images/Product10.jpeg" alt="Product Image">
-      <div class="product-details">
-        <h4>Fenty beauty
-Bright Fix - Eye Brightening</h4>
-        <p>165 LYD</p>
-        <a href="Cart.html">
-        <button class="nav-btn">Add to Bag</button>
-        </a>
-      </div>
-    </div>
-
-    <!-- Add more product cards as needed -->
-  </section>
-</main>
-
- <script>
-    // Function to add items to the cart
-    function addToCart(productId) {
-      const product = document.getElementById(productId);
-      const productName = product.querySelector('h4').innerText;
-      const productPrice = product.querySelector('p').innerText;
-
-      // Create or update cart in localStorage
-      let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-      cart.push({ name: productName, price: productPrice });
-      localStorage.setItem('cart', JSON.stringify(cart));
-    }
-  </script>
-
-
+       
+      </header>  
+      </nav>
+    
+   
+   
+    <div class="shopping-body">
+    <header class="shopping">
+      <!--header box that contains the header and shopping cart classes -->
+      <div class="row-2">
+  
  
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        document.querySelector('.row-2').style.paddingTop = navHeight + 'px';
-    });
-</script>
+  
 
+  
+        <select class="sephora-select">
+             <option>Sort By Featured</option>
+             <option>Sort by price</option>
+        </select>
+        
+         <select class="sephora-select">
+             <option>All Departments</option>
+             <option>Makeup</option>
+             <option>Skincare</option>
+        </select>
+        
+            <select class="sephora-select">
+         
+             <option>Complexion</option>
+             <option>Eye</option>
+             <option>Lip + Cheek</option>
+        </select>
+        
+            <select class="sephora-select">
+         
+             <option>All prices</option>
+             <option>0-50</option>
+             <option>50-100</option>
+             <option>100-150</option>
+             <option>150-250</option>
+             <option>250-400</option>
+             
+        </select>
+      </div>
+      <!--Header h1 positionated on the left of the web page-->
+      <div class="icon" id="icon-container">
+        <!--container for the information of the icons and all the classes and elements of the shopping cart product-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="iconbasket"
+        >
+          <!--shopping bag icon information(references and source)-->
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="product-counter">
+          <span id="product-counterID">0</span>
+        </div>
+        <div class="container-cart-products hidden-cart" id="hid-cart">
+          <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="cart-info-product">
+              <span class="products-cart-cuantity">1</span>
+              <p class="product-cart-name">Knit sweter</p>
+              <span class="price-cart-item"> $50</span>
+            </div>
+            <!--X icon information(references and source) iside the products bag/cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-X"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+        </div>
+          <!--Box container for the total amount of money of the product inside the shopping cart-->
+          <div class="cart-total hidden">
+            <h3>Total:</h3>
+            <span class="Total-pay">$50</span>
+          </div>
+          <p class="cart-empty">Shopping cart empty!</p>
+        </div>
+      </div>
+    </header>
+    <!--Box container "class=products" for the products items boxes which each box contain all the information sources of the images, price and name of the product-->
+    <div class="products">
+      <div class="item">
+        <!--container box for the item box inside the class products -->
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product1.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Tarte 
+            Shape Tape™ - Ultra Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">45 LYD</p>
 
+          <button class="add-cart">Add to Bag</button>
+        </div>
+      </div>
+      <div class="item">
+        <!--container box for the item box inside the class products -->
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img
+            src="images/Product2.jpeg"
+            alt="product"
+          />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Fenty Beauty
+            Match Stix Matte Skinstick </h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">115.00 LYD</p>
+          <button class="add-cart">Add to basket</button>
+        </div>
+      </div>
+      <div class="item">
+        <!--container box for the item box inside the class products -->
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img
+            src="images/Product3.jpeg"
+            alt="product"
+          />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Nars 
+            Radian Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">195 LYD</p>
+          <button class="add-cart">Add to basket</button>
+        </div>
+      </div>
+      <div class="item">
+        <!--container box for the item box inside the class products -->
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product3.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Nars 
+            Radiant Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">150 LYD</p>
+          <button class="add-cart">Add to basket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="app.js"></script>
+    <!--link to the javascript file that contains the shopping cart event-->
 
-
-</body>
-
+  </body>
 </html>
- 
