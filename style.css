@@ -3,19 +3,62 @@
 	padding: 0;
 	box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+  }
+
+.mini-nav {
+		background-color: #000; /* Set the background color for the mini nav strip */
+		color: #fff; /* Set the text color for the mini nav strip */
+		text-align: center;
+		padding: 10px; /* Adjust the padding as needed */
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1000; /* Ensure the mini nav appears above other elements */
+	 
 }
+	
+	/* Adjust the styles for the text or links within the mini nav strip */
+	.mini-nav p {
+		margin: 0;
+		font-size: 14px;
+		 
+		font-weight: bold;
+	}
+	 
+
 nav{
 	position: fixed;
-	top: 0;
+	top:20px;
 	left: 0;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 30px 5%;
-	border-bottom: 1px solid #000;
+	padding: 1px 5%; 
 	z-index: 10;
-	background: #FDF2E9;
+	background: #fff;
+}
+icons{
+	display: flex;
+    gap: 10px; 
+}
+.second-mini-nav{
+	background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 2vh; /* Adjust padding using vh (viewport height) */
+    width: 100%;
+  
+	margin-top: 20vh;
+     
+}
+
+/* Adjust the styles for the text or links within the mini nav strip */
+.second-mini-nav p {
+	margin: 0;
+	font-size: 14px;
+	 
+	font-weight: bold;
 }
 nav ul li{
 	list-style: none;
@@ -31,9 +74,7 @@ nav .logo{
 	width: 135px;
 	height: auto;
 	cursor: pointer;
-	position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+	 
 }
  
 
@@ -53,15 +94,107 @@ nav .logo{
     z-index: 1; 
     font-weight: bold;
 }
+.searchBar {
+    width: 60%;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.glass:hover {
+    color: orangered;
+    cursor: pointer;
+}
+.image-slider {
+	max-width: 80%;
+	overflow: hidden;
+	position: relative;
+	margin: 5% auto 0;
+	height: 500px;
+}
+
+.mySlides {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySlides img {
+	max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	cursor: pointer;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+.slide-message {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Align text to the left */
+    color: #000; /* Adjust text color */
+    font-size: 36px; /* Set font size twice as big */
+	font-family: "Archivo Black", sans-serif;
+    font-weight: bold; /* Make the text bold */
+    width: 50%; /* Set width to 50% for the right half */
+    padding-left: 20px; /* Add padding for the left side */
+    /* Add any additional styles as needed */
+	
+   
+}
  
 
+.slide-button {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+}
+
+.slide-button:hover {
+    background-color: #333; /* Darken the background color on hover */
+}
 body { 
  
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	min-height: 100vh;
-	background: #FDF2E9;
+	background: #fff;
  	padding: 0 10%;
 	display: flex;
 	justify-content: center;
@@ -73,11 +206,11 @@ image-container {
     overflow: hidden;  
 }
 
- 
+/* Style for the image inside the container */
 .image-container img {
-    width: 100%;  
-    height: auto;  
-    display: block;  
+    width: 100%; /* Make the image width span the entire container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it's a block element */
 
  
 	
@@ -157,7 +290,7 @@ image-container {
 .nav-links a {
     text-decoration: none;  
     color: black;  
-    margin-right: 20px;  
+    margin-right: 5%;  
     display: inline;  
     
 }
@@ -177,6 +310,6 @@ body, header, main, img {
 .full-width-image {
     width: 100%;
     display: block;
+	height: 500px;
 }
-
 
