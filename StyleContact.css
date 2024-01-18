@@ -5,13 +5,13 @@
 }
 body
 {
-    background-color:  #8B4513;
+    background-color:  #fff;
     font-family: sans-serif;
 }
 .contact-box
 {
 	width: 500px;
-	background-color: #FDF2E9;
+	background-color: #F;
 	box-shadow: 0 0 20px 0 #999;
 	top: 50%;
 	left: 50%;
@@ -39,14 +39,116 @@ form
 	height: 150px;
 	padding-top: 10px;
 }
-.btn
-{
-	border-radius: 20px;
-	color: #fff;
-	margin-top: 18px;
-	padding: 10px;
-	background-color:  #8B4513;
-	font-size: 12px;
-	border: none;
-	cursor: pointer;
+ 
+a {
+    text-decoration: none; 
+    color: black;  
+}
+
+ a:hover {
+    color: gray;  
+}
+
+ .nav-links {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;  
+    color: black;  
+    margin-right: 20px;  
+    display: inline;  
+    
+}
+.mini-nav {
+	background-color: #000; /* Set the background color for the mini nav strip */
+	color: #fff; /* Set the text color for the mini nav strip */
+	text-align: center;
+	padding: 10px; /* Adjust the padding as needed */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Ensure the mini nav appears above other elements */
+ 
+}
+
+/* Adjust the styles for the text or links within the mini nav strip */
+.mini-nav p {
+	margin: 0;
+	font-size: 14px;
+	 
+	font-weight: bold;
+}
+ 
+
+nav{
+position: fixed;
+top:20px;
+left: 0;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1px 5%; 
+z-index: 10;
+background: #fff;
+}
+icons{
+display: flex;
+gap: 10px; 
+}
+.second-mini-nav{
+background-color: #fff;
+color: #fff;
+text-align: center;
+padding: 2vh; /* Adjust padding using vh (viewport height) */
+width: 100%;
+ 
+margin-top: 20vh;
+ 
+}
+
+/* Adjust the styles for the text or links within the mini nav strip */
+.second-mini-nav p {
+margin: 0;
+font-size: 14px;
+font-family: "Salsa", cursive;
+font-weight: bold;
+}
+nav ul li{
+list-style: none;
+display: inline-block;
+margin: 10px 20px;
+font-weight: 500;
+cursor: pointer;
+content: '•';
+margin-left: 20px;
+ margin-right: 20px;
+}
+nav .logo{
+width: 135px;
+height: auto;
+cursor: pointer;
+ 
+}
+.searchBar {
+    width: 60%;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.glass:hover {
+    color: orangered;
+    cursor: pointer;
 }
