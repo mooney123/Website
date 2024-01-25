@@ -27,9 +27,9 @@
 <nav>
     
  
-<img src="images/logo.png" alt="" class="logo" >
+<img src="images/logoImage.png" alt="" class="logo" >
  <div class="searchBar">
-      <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+      <input placeholder="Search..." id="searchBar" name="searchBar" type="text" onkeydown="handleSearchEnter(event)">
       <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
   </div>
 
@@ -38,9 +38,7 @@
    <img src="images/instagram.png" width="30px" height="30px"
 </a>
  
-<a href="cart.html">
-<img alt="" src="images/cart.png" width="30px" height="30px">
-</a>
+ 
 </div>
 </nav>
 <div class="second-mini-nav">
@@ -57,6 +55,7 @@
      </div> 
     
 </div>
+
 <div class="image-slider">
    <div class="mySlides">
     <div class="slide-message">
@@ -83,23 +82,98 @@
   
  
  
-<div class="header">
+<h1 class="section-title">Best Sellers</h1>
 
-   <h1> <br><br> </h1>
-   <div class="btn-container">
-   
-       
-     
-     
-   </div>
-   
-   
-   
-   
-   
+<div class="featured">
+ 
+    <div class="item" data-brand="Tarte" data-type="Skincare" data-price="45">
+
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product1.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Tarte 
+            Shape Tape™ - Ultra Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">45 LYD</p>
+
+          <button class="add-cart">Add to Bag</button>
+        </div>
+      </div>
+      <div class="item" data-brand="Tarte" data-type="Skincare" data-price="45">
+
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product1.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Tarte 
+            Shape Tape™ - Ultra Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">45 LYD</p>
+
+          <button class="add-cart">Add to Bag</button>
+        </div>
+      </div>
+      <div class="item" data-brand="Tarte" data-type="Skincare" data-price="45">
+
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product1.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Tarte 
+            Shape Tape™ - Ultra Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">45 LYD</p>
+
+          <button class="add-cart">Add to Bag</button>
+        </div>
+      </div>
+      <div class="item" data-brand="Tarte" data-type="Skincare" data-price="45">
+
+        <figure>
+          <!--figure container where is the container for the sources image element-->
+          <img src="images/Product1.jpeg" alt="product" />
+        </figure>
+        <div class="product-info">
+          <!--container for the product information elements-->
+          <h4>Tarte 
+            Shape Tape™ - Ultra Creamy Concealer</h4>
+          <p class="description-product">
+             
+          </p>
+          <p class="price">45 LYD</p>
+
+          <button class="add-cart">Add to Bag</button>
+        </div>
+      </div>
 </div>
 
+<div class="footer">
+    <p>&copy; 2024 . All rights reserved.</p>
+   
+    
+   
+ 
+</div>
 <script>
+     function handleSearchEnter(event) {
+        if (event.key === 'Enter') {
+            const searchTerm = document.getElementById('searchBar').value;
+            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
+        }
+    }
      let slideIndex = 0;
 let intervalId; // Declare the intervalId outside the functions
 
@@ -117,7 +191,7 @@ function showSlides() {
 
 function plusSlides(n) {
     clearInterval(intervalId);
-    showSlides((slideIndex += n));
+    showSlides();
     intervalId = setInterval(showSlides, 4000); // Restart the interval after changing the slide
 }
 
