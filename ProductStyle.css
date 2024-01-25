@@ -1,10 +1,11 @@
- 
+
 
 /*Adding margin, padding and font to everything */
 * {
    margin: 0;
    padding: 0;
-   font-family:'Montserrat', sans-serif;
+   
+   box-sizing: border-box;
   
  }
  /*using the body container to change the background aspect for the shopping.html page */
@@ -40,23 +41,50 @@
 	top:20px;
 	left: 0;
 	width: 100%;
-	display:inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1px 5%; 
+	padding: 1px 2%; 
 	z-index: 10;
 	background: #fff;
  }
- icons{
+ .icons{
 	display: flex;
     gap: 10px; 
-    margin-left: auto;
+	margin-top: 25px;
+  margin-right: 70px;
+	 
+
 }
- .logo{
+nav .logo{
 	width: 135px;
 	height: auto;
 	cursor: pointer;
-	 
+	margin-left: 70px; /* Adjust the right margin for horizontal positioning */
+    margin-top: 25px; /* Adjust the top margin for vertical positioning */
+
+}
+.searchBar {
+  width: 36%;
+  background-color: #eee;
+  border-radius: 25px;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px ;
+  margin-right: 80px;
+}
+
+input {
+   border: none;
+   outline: none;
+   background: none;
+}
+
+.glass:hover {
+   color: orangered;
+   cursor: pointer;
 }
  
   
@@ -275,7 +303,7 @@ border-radius: 20px;
  
  /*passing the mouse hover the item*/
  .item:hover {
-   background: #33333377;
+    
    border-radius: 13px;
    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
  }
@@ -295,12 +323,7 @@ border-radius: 20px;
  }
  /*design and format for the animation when we hover the item boxes, giving effect to the images and using the
  z-index setting to 1 to no overpass the navigation bar which has index z position of 3 when we scrolldown*/
- .item:hover img {
-   transform: scale(1.2);
-   position: relative;
-  
-   z-index: 1;
- }
+ 
  /*formatting the class product-info which is the box that contains all the info of the products in the item box*/
  .product-info {
    padding: 15px 15px;
@@ -361,10 +384,16 @@ border-radius: 20px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   margin-left: 20px
+   margin-left: 20px;
+   background-color: #ebebeb;
+   width: 100%; /* Adjust the width as needed */
+   margin: 0 auto; /* Center the container horizontally */
+   height: 200px;
+    
+}
     
   
-}
+
 
 .row-2 h2 {
  text-align: left;
@@ -374,30 +403,26 @@ border-radius: 20px;
 .row-2 select {
  margin-left: 10px;
  border: none;
+ background-color: #ebebeb;
+ border-bottom: 2px solid #BAB7B5;
 }
 .row-2 select:last-child {
  margin-right: 25px;  
 }
-.searchBar {
-   width: 60%;
-    
-   background-color: #eee;
-   border-radius: 3px;
-   padding: 9px;
-   display: flex;
-   align-items: center;
-;
-   justify-content: space-between;
-   margin: 0 auto;
+.hidden {
+   display: none;
 }
-
-input {
-   border: none;
-   outline: none;
-   background: none;
+.sephora-select {
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold;
+  background-color: #2D2926;
 }
-
-.glass:hover {
-   color: orangered;
-   cursor: pointer;
+.sephora-select::after {
+  content: '\25BC'; /* Unicode character for a downward-pointing triangle */
+  font-size: 20px; /* Adjust the font size of the arrow */
+  color: #fff; /* Set the color of the arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the distance from the right edge */
+  transform: translateY(-50%);
 }
