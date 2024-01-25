@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <!--general information about the web settings -->
     <meta charset="@UTF-8" />
     <meta name="viewport" content="width= device-width, initial-scale=1.0" />
@@ -10,6 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Salsa&display=swap" rel="stylesheet">
     <!--linking the styleshop.css to upload styles using css-->
   </head>
   <!--element body that is our container for all the element inside the page-->
@@ -20,17 +31,22 @@
   </div>
     <nav>
      
-      <a href="index.html"
-        ><img src="images/logo.png" class="logo" alt="" ></a>
+      <a href="index.html">
+        <img src="images/logoImage.png" class="logo" alt=""></a>
         <div class="searchBar">
-      <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+      <input placeholder="Search..." id="searchBar" name="searchBar" type="text" >
       <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
   </div>
+
+  <div class="icons">
+    <a href="https://www.instagram.com/skinsolutions.ly/"> 
+       <img src="images/instagram.png" width="30px" height="30px">
+      </a>
+    
        
  
-       
-      </header>  
-      </nav>
+      </div>  
+    </nav>
     
    
    
@@ -43,25 +59,25 @@
   
 
   
-        <select class="sephora-select">
+        <select class="sephora-select ">
              <option>Sort By Featured</option>
              <option>Sort by price</option>
         </select>
         
-         <select class="sephora-select">
-             <option>All Departments</option>
-             <option>Makeup</option>
-             <option>Skincare</option>
+         <select class="sephora-select brand">
+             <option> All Brands</option>
+             <option>Tarte</option>
+             <option>Nars</option>
         </select>
         
-            <select class="sephora-select">
+            <select class="sephora-select type">
          
-             <option>Complexion</option>
-             <option>Eye</option>
-             <option>Lip + Cheek</option>
+             <option>All Types</option>
+             <option>Skincare</option>
+             <option>Makeup</option>
         </select>
         
-            <select class="sephora-select">
+            <select class="sephora-select price">
          
              <option>All prices</option>
              <option>0-50</option>
@@ -129,8 +145,10 @@
     </header>
     <!--Box container "class=products" for the products items boxes which each box contain all the information sources of the images, price and name of the product-->
     <div class="products">
-      <div class="item">
+ 
         <!--container box for the item box inside the class products -->
+        <div class="item" data-brand="Tarte" data-type="Skincare" data-price="45">
+
         <figure>
           <!--figure container where is the container for the sources image element-->
           <img src="images/Product1.jpeg" alt="product" />
@@ -147,8 +165,11 @@
           <button class="add-cart">Add to Bag</button>
         </div>
       </div>
-      <div class="item">
+    
+         
         <!--container box for the item box inside the class products -->
+        <div class="item" data-brand="Fenty Beauty" data-type="Makeup" data-price="115">
+
         <figure>
           <!--figure container where is the container for the sources image element-->
           <img
@@ -167,7 +188,8 @@
           <button class="add-cart">Add to basket</button>
         </div>
       </div>
-      <div class="item">
+      
+      <div class="item" data-brand="Nars" data-type="Makeup" data-price="195">
         <!--container box for the item box inside the class products -->
         <figure>
           <!--figure container where is the container for the sources image element-->
@@ -187,7 +209,8 @@
           <button class="add-cart">Add to basket</button>
         </div>
       </div>
-      <div class="item">
+    
+    <div class="item" data-brand="Nars" data-type="Makeup" data-price="195">
         <!--container box for the item box inside the class products -->
         <figure>
           <!--figure container where is the container for the sources image element-->
@@ -204,6 +227,9 @@
           <button class="add-cart">Add to basket</button>
         </div>
       </div>
+    </div>
+  </div>
+    </div>
     </div>
   </div>
     <script src="app.js"></script>
