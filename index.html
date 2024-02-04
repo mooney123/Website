@@ -34,8 +34,26 @@
   </div>
 
 <div class="icons">
+    <img src="images/cart.png" class="iconbasket" width="30px" height="30px">
+    <div class="product-counter">
+      <span id="product-counterID">0</span>
+  </div>
+  <div class="container-cart-products hidden-cart" id="hid-cart">
+      <div class="row-product hidden">
+          <!-- Products will be dynamically added here -->
+      </div>
+      <!-- Box container for the total amount of money of the product inside the shopping cart -->
+      <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="Total-pay">0 LYD</span>
+          <button class="checkout-btn" onclick="redirectToCheckout()">Checkout</button>
+      </div>
+      <p class="cart-empty">Shopping cart empty!</p>
+  </div>
+</div>
+    
 <a href="https://www.instagram.com/skinsolutions.ly/">
-   <img src="images/instagram.png" width="30px" height="30px"
+   <img src="images/instagram.png" width="30px" height="30px">
 </a>
  
  
@@ -44,7 +62,8 @@
 <div class="second-mini-nav">
    <div class="nav-links">
       <a href="index.html" >Home</a>
-      <a href="products.html" >Products</a>
+      
+      <a href="products.html" class="products-link">Products</a>
     
       <a href="contact.html">Contact us</a>
       <a href="contact.html">Hair</a>
@@ -69,6 +88,13 @@
 </div>
        
    <div class="mySlides">
+    <div class="slide-message">
+        <p class="message-2">Radiance Redefined:</p>
+        <p class="message-2">Unveil Your Timeless Glow</p>
+        <a href="products.html">
+            <button class="slide-button" onclick="handleButtonClick()">Shop Now</button>
+        </a>
+    </div>
        <img src="images/slideshow3.jpg" alt="Slide 2">
    </div>
    <!-- Add more slides as needed -->
@@ -167,38 +193,7 @@
    
  
 </div>
-<script>
-     function handleSearchEnter(event) {
-        if (event.key === 'Enter') {
-            const searchTerm = document.getElementById('searchBar').value;
-            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
-        }
-    }
-     let slideIndex = 0;
-let intervalId; // Declare the intervalId outside the functions
-
-function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-}
-
-function plusSlides(n) {
-    clearInterval(intervalId);
-    showSlides();
-    intervalId = setInterval(showSlides, 4000); // Restart the interval after changing the slide
-}
-
-showSlides();
-intervalId = setInterval(showSlides, 4000);
-</script>
-
+<script src="index.js"></script>
 </body>
 
 </html>
