@@ -23,6 +23,14 @@ const countProducts = document.querySelector('#product-counterID');
 
 const cartEmpty = document.querySelector('.cart-empty');
 const cartTotal = document.querySelector('.cart-total');
+function getCartItems() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+// Function to update the cart in localStorage
+function updateCart(cartItems) {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+}
 
 // EventListener for the productsList that listens every time the user clicks
 productsList.addEventListener('click', e => {
@@ -33,6 +41,7 @@ productsList.addEventListener('click', e => {
             quantity: 1,
             title: product.querySelector('h4').textContent,
             price: product.querySelector('.price').textContent,
+            imageUrl: product.dataset.image,
         };
 
         const exists = allProducts.some(
@@ -202,4 +211,14 @@ const products = document.querySelectorAll(".item");
 
     // Initial filtering when the page loads
     filterProducts();
+}); function redirectToCheckout() {
+    // Redirect to checkout.html
+    window.location.href = "checkout.html";
+}
+window.addEventListener('load', () => {
+    const storedCart = localStorage.getItem('shoppingCart');
+    if (storedCart) {
+        allProducts = JSON.parse(storedCart);
+        showHTML();
+    }
 });
