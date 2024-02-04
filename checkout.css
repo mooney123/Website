@@ -1,0 +1,170 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    
+  }
+
+.mini-nav {
+		background-color: #000; /* Set the background color for the mini nav strip */
+		color: #fff; /* Set the text color for the mini nav strip */
+		text-align: center;
+		padding: 10px; /* Adjust the padding as needed */
+		position: absolute;
+		width: 100%;
+		top: 0;
+		z-index: 1000; /* Ensure the mini nav appears above other elements */
+
+	 
+}
+	
+	/* Adjust the styles for the text or links within the mini nav strip */
+	.mini-nav p {
+		margin: 0;
+		font-size: 14px;
+		 
+		font-weight: bold;
+	}
+	 
+
+nav{
+	position: absolute;
+	top:20px;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1px 2%; 
+	z-index: 10;
+	background: #fff;
+}
+ 
+.icons{
+	display: flex;
+    gap: 10px; 
+	margin-top: 45px;
+	margin-left: 200px;
+	 
+
+}
+.second-mini-nav{
+	background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 70px; /* Adjust padding using vh (viewport height) */
+    width: 100%;
+    margin-top: 10vh;
+     
+}
+
+/* Adjust the styles for the text or links within the mini nav strip */
+.second-mini-nav p {
+	margin: 0;
+	font-size: 14px;
+	
+	font-weight: bold;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 10px 20px;
+	font-weight: 500;
+	cursor: pointer;
+	content: '•';
+	margin-left: 20px;
+	 margin-right: 20px;
+}
+nav .logo{
+	width: 135px;
+	height: auto;
+	cursor: pointer;
+	margin-left: 70px; /* Adjust the right margin for horizontal positioning */
+    margin-top: 30px; /* Adjust the top margin for vertical positioning */
+
+}
+ 
+
+ 
+.searchBar {
+    width: 36%;
+    background-color: #eee;
+    border-radius: 25px;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	margin-top: 40px ;
+	margin-left: 160px; 
+
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.glass:hover {
+    color: orangered;
+    cursor: pointer;
+}
+a {
+    text-decoration: none; 
+    color: black;  
+}
+
+ a:hover {
+    color: gray;  
+}
+
+ .nav-links {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;  
+    color: black;  
+    margin-right: 5%;  
+    display: inline;  
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+#checkoutTable {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+#checkoutTable th,
+#checkoutTable td {
+    padding: 10px;
+    border: none;
+    text-align: left;
+}
+
+#checkoutTable th {
+    background-color: #f2f2f2;
+}
+
+#totalCost {
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    #checkoutTable {
+        width: 100%;
+    }
+}
