@@ -1,30 +1,29 @@
-document.getElementById('searchBar').addEventListener('keyup', (e) => {
-    const searchData = e.target.value.toLowerCase();
-    const filteredData = categories.filter((item) => {
-        return (
-            item.title.toLowerCase().includes(searchData)
-        );
-    });
-    displayItem(filteredData);
-});
+function handleSearchEnter(event) {
+    if (event.key === 'Enter') {
+        const searchTerm = document.getElementById('searchBar').value;
+        window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
+    }
+}
+ let slideIndex = 0;
+let intervalId; // Declare the intervalId outside the functions
 
-const displayItem = (items) => {
-    document.getElementById('root').innerHTML = items.map((item) => {
-        var { image, title, price } = item;
-        return (
-            `<div class='box'>
-                <div class='img-box'>
-                    <img class='images' src=${image}></img>
-                </div> 
-                <div class='bottom'>
-                    <p>${title}</p>
-                    <h2>$ ${price}.00</h2>
-                    <button>Add to cart</button>
-                </div>
-            </div>`
-        );
-    }).join('');
-};
+function showSlides() {
+const slides = document.getElementsByClassName("mySlides");
+for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {
+    slideIndex = 1;
+}
+slides[slideIndex - 1].style.display = "block";
+}
 
-displayItem(categories);
- 
+function plusSlides(n) {
+clearInterval(intervalId);
+showSlides();
+intervalId = setInterval(showSlides, 4000); // Restart the interval after changing the slide
+}
+
+showSlides();
+intervalId = setInterval(showSlides, 4000);
