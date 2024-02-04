@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="Checkout.css">
+    <!-- Add any additional styles or scripts here -->
+</head>
+<body>
+    <div class="mini-nav">
+       
+        <p>Free Delivery on Orders Over 500 LYD</p>
+    </div>
+     
+  <nav>
+      
+   
+  <img src="images/logoImage.png" alt="" class="logo" >
+   <div class="searchBar">
+        <input placeholder="Search..." id="searchBar" name="searchBar" type="text" onkeydown="handleSearchEnter(event)">
+        <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+    </div>
+  
+  <div class="icons">
+      <img src="images/cart.png" width="30px" height="30px">
+      
+      
+  <a href="https://www.instagram.com/skinsolutions.ly/">
+     <img src="images/instagram.png" width="30px" height="30px">
+  </a>
+   
+   
+  </div>
+  </nav>
+  <div class="second-mini-nav">
+     <div class="nav-links">
+        <a href="index.html" >Home</a>
+        
+        <a href="products.html" class="products-link">Products</a>
+      
+        <a href="contact.html">Contact us</a>
+        <a href="contact.html">Hair</a>
+        <a href="contact.html">Body</a>
+        <a href="contact.html">Fragrance</a>
+        <a href="contact.html">Skincare</a>
+        <a href="contact.html">Makeup</a>
+       </div> 
+      
+  </div>
+  
+    
+
+    <!-- Table to display cart items -->
+    <table id="checkoutTable">
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody id="checkoutTableBody"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: right;">Subtotal:</td>
+                <td><span id="totalCost"></span> LYD</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;">Delivery:</td>
+                <td>10 LYD</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;">Total:</td>
+                <td><span id="totalCost"></span> LYD</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+  
+
+   
+   
+    <!-- Add any additional content or styling here -->
+
+    <script src="checkout.js"></script>
+</body>
+</html>
