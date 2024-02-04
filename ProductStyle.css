@@ -37,7 +37,7 @@
 }
  /*Header Navigation bar responsive */
  nav{
-   position: fixed;
+   position: absolute;
 	top:20px;
 	left: 0;
 	width: 100%;
@@ -150,6 +150,7 @@ input {
    height: 40px;
    width: 40px;
    stroke: rgba(0, 0, 0);
+    
  }
  /*confifuring the cursor for the icon basket class when we hover it*/
  .iconbasket:hover {
@@ -175,6 +176,7 @@ input {
    display: flex;
    justify-content: right;
    align-items: center;
+   
  }
  
  /*format for the product-counter class(container for the counter of the products that is over the basket icon)
@@ -184,7 +186,7 @@ input {
    top: 58%;
    right: 0;
  
-   background-color: black;
+   background-color: #BE0E09;
    color: white;
    width: 25px;
    height: 25px;
@@ -197,6 +199,7 @@ input {
  /*giving font- size to the span that contains just the number of the counter*/
  #product-counterID {
    font-size: 12px;
+   
  }
  
  /*design format for the container-car-products that is the box that will appear when we do a click on the icon of the basket
@@ -219,6 +222,7 @@ input {
  .icon-X {
    width: 25px;
    height: 25px;
+
  }
  /*format for the icon-X class when we hover it*/
  .icon-X:hover {
@@ -388,7 +392,7 @@ border-radius: 20px;
    background-color: #ebebeb;
    width: 100%; /* Adjust the width as needed */
    margin: 0 auto; /* Center the container horizontally */
-   height: 200px;
+   height: 100px;
     
 }
     
@@ -417,12 +421,4 @@ border-radius: 20px;
   font-weight: bold;
   background-color: #2D2926;
 }
-.sephora-select::after {
-  content: '\25BC'; /* Unicode character for a downward-pointing triangle */
-  font-size: 20px; /* Adjust the font size of the arrow */
-  color: #fff; /* Set the color of the arrow */
-  position: absolute;
-  top: 50%;
-  right: 10px; /* Adjust the distance from the right edge */
-  transform: translateY(-50%);
-}
+ 
